@@ -1,5 +1,12 @@
 package ciseleven.pa6;
-
+/*
+ * Name: Marcus
+ * Date: 10/26/21
+ * Assignment Name: PA6 Part B SwitchIf
+ * Description: Calculates the weight of a person on different planets
+ * Inputs: Name, and weight
+ * Outputs: Questions and weight on the selected planet
+ */
 import java.util.Scanner;
 
 public class FanSwitch {
