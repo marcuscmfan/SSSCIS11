@@ -9,7 +9,7 @@ package ciseleven.pa8;
  */
 import java.util.Scanner;
 
-public class MethodTest {
+public class FanPA8PartBClasses {
 
     static Scanner s = new Scanner(System.in);
     static int ans1;
