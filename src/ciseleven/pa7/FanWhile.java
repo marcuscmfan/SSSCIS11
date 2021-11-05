@@ -17,11 +17,11 @@ public class FanWhile {
     public static void main(String[] args) {
         System.out.println("Numbers squared");
 
-
         while(a<6){
             System.out.println(a + " " + (int) Math.pow(a,2));
             a++;
         }
+
         System.out.println("Even number");
 
         while(b>-20) {
@@ -31,6 +31,7 @@ public class FanWhile {
             }
             b--;
         }
+
         System.out.println("Creative");
 
         while(c < 101){
