@@ -2,30 +2,24 @@ package ciseleven.pa9;
 
 import java.util.Scanner;
 
-public class myGenesisG90Bonus {
+public class myGenesisG90 {
 
     static Automobile myGenesis = new Automobile(9);
-    static boolean continueyesno = true;
     static Scanner s = new Scanner(System.in);
 
     public static void main(String[] args) {
+        switchCase(options());
+    }
 
-
-
-
-        while (continueyesno == true) {
-            System.out.println("What would you like to do to your car?");
-            System.out.println("1) Fillup\n2) Fuel Report\n3) Take a trip");
-
-            String anschar = s.nextLine();
-            String ansString = "";
-            for (int i = 0; i < anschar.length(); i++) {
-                ansString = ansString + anschar.charAt(i);
-            }
-            switchCase(ansString);
+    public static String options() {
+        System.out.println("What would you like to do to your car?");
+        System.out.println("1) Fillup\n2) Fuel Report\n3) Take a trip");
+        String anschar = s.nextLine();
+        String ansString = "";
+        for (int i = 0; i < anschar.length(); i++) {
+            ansString = ansString + anschar.charAt(i);
         }
-
-
+        return ansString;
     }
 
     public static void switchCase(String ansString) {
@@ -45,7 +39,9 @@ public class myGenesisG90Bonus {
                 System.out.println("Would you like to continue?\n\n[1] Yes\n[2] No");
                 int ans = s.nextInt();
                 if (ans != 1){
-                    continueyesno = false;
+                    System.exit(0);
+                }else {
+                    switchCase(options());
                 }
                 break;
             case "Fuel Report":
@@ -53,7 +49,9 @@ public class myGenesisG90Bonus {
                 System.out.println("Would you like to continue?\n\n[1] Yes\n[2] No");
                 ans = s.nextInt();
                 if (ans != 1){
-                    continueyesno = false;
+                    System.exit(0);
+                }else {
+                    switchCase(options());
                 }
                 break;
             case "Take a trip":
@@ -64,13 +62,17 @@ public class myGenesisG90Bonus {
                 System.out.println("Would you like to continue?\n\n[1] Yes\n[2] No");
                 ans = s.nextInt();
                 if (ans != 1){
-                    continueyesno = false;
+                    System.exit(0);
+                }else {
+                    switchCase(options());
                 }
                 break;
             case "End":
-                return;
+                System.exit(0);
+                break;
             default:
                 System.out.println("Please try again.");
+                switchCase(options());
                 return;
         }
     }
